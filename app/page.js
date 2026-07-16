@@ -1,5 +1,5 @@
 import HeroSection from "./components/HeroSection";
-import Serials from "./components/Serials";
+import Serials from "./components/Movies";
 
 export default function Home() {
   return (

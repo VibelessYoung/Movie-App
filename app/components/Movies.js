@@ -1,5 +1,5 @@
 import { getMovies } from "../lib/api";
-import SerialSlider from "./SerialSlider";
+import SerialSlider from "./MoviesSlider";
 
 export default async function Serials() {
   const response = await getMovies();
