@@ -10,7 +10,7 @@ import "swiper/css/effect-fade";
 
 export default function HeroSlider({ movies }) {
   return (
-    <section className="relative h-[80vh] w-full">
+    <section className="relative h-[90vh] w-full">
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
         slidesPerView={1}
