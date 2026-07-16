@@ -8,10 +8,10 @@ export default async function Serials() {
     <section className="mx-auto mt-20 max-w-7xl px-6">
       <div className="mb-8 flex items-center justify-between">
         <div>
-          <h2 className="text-3xl font-bold text-white">Trending Series</h2>
+          <h2 className="text-3xl font-bold text-white">Trending Movies</h2>
 
           <p className="mt-2 text-zinc-400">
-            Discover the most popular series today.
+            Discover the most popular movies today.
           </p>
         </div>
 
