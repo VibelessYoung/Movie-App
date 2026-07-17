@@ -1,7 +1,20 @@
-import React from "react";
+import { getMovies } from "../lib/api";
+import SearchResults from "../components/SearchResults";
 
-function page() {
-  return <div>page</div>;
+export default async function SearchPage() {
+  const response = await getMovies();
+
+  return (
+    <main className="mx-auto max-w-7xl px-6 py-12">
+      <div className="mb-12 text-center">
+        <h1 className="text-5xl font-black text-white">Search Movies</h1>
+
+        <p className="mt-4 text-zinc-400">
+          Search through our movie collection.
+        </p>
+      </div>
+
+      <SearchResults movies={response.data} />
+    </main>
+  );
 }
-
-export default page;

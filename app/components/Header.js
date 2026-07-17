@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Search, Bell, Heart, Menu, Clapperboard, X } from "lucide-react";
+import Link from "next/link";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,9 +66,12 @@ function Header() {
 
         {/* Right */}
         <div className="flex items-center gap-2 sm:gap-3">
-          <button className="rounded-xl bg-zinc-900 p-2.5 text-zinc-300 transition hover:bg-zinc-800 hover:text-white sm:p-3">
+          <Link
+            className="rounded-xl bg-zinc-900 p-2.5 text-zinc-300 transition hover:bg-zinc-800 hover:text-red-500 sm:p-3"
+            href="/search"
+          >
             <Search size={20} />
-          </button>
+          </Link>
 
           <button className="rounded-xl bg-zinc-900 p-2.5 text-zinc-300 transition hover:bg-zinc-800 hover:text-red-500 sm:p-3">
             <Heart size={20} />
