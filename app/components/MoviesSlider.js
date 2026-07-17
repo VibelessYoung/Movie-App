@@ -9,6 +9,8 @@ import Link from "next/link";
 import "swiper/css";
 import "swiper/css/navigation";
 
+import FavoriteButton from "./FavoriteButton";
+
 export default function SerialSlider({ movies }) {
   return (
     <Swiper
@@ -43,6 +45,8 @@ export default function SerialSlider({ movies }) {
                   alt={movie.original_title}
                   className="h-[360px] w-full object-cover transition duration-500 group-hover:scale-110"
                 />
+
+                <FavoriteButton movie={movie} />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-0 transition group-hover:opacity-100" />
 

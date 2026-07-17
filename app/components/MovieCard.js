@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FavoriteButton from "./FavoriteButton";
 
 export default function MovieCard({ movie }) {
   return (
@@ -9,6 +10,7 @@ export default function MovieCard({ movie }) {
           alt={movie.original_title}
           className="h-[420px] w-full object-cover transition duration-500 group-hover:scale-110"
         />
+        <FavoriteButton movie={movie} />
 
         <div className="p-5">
           <h2 className="line-clamp-1 text-xl font-bold text-white">

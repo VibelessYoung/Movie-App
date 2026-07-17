@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import FavoriteButton from "./FavoriteButton";
 
 export default function TopRatedGrid({ movies }) {
   return (
@@ -16,6 +17,8 @@ export default function TopRatedGrid({ movies }) {
               alt={movie.original_title}
               className="h-[380px] w-full object-cover transition duration-500 group-hover:scale-110"
             />
+
+            <FavoriteButton movie={movie} />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
 
