@@ -55,16 +55,6 @@ export default function HeroSlider({ movies }) {
                 <p className="mt-6 line-clamp-3 text-lg leading-8 text-zinc-300">
                   {movie.overview}
                 </p>
-
-                <div className="mt-10 flex gap-4">
-                  <button className="rounded-xl bg-red-600 px-8 py-4 font-bold text-white transition hover:bg-red-700">
-                    Watch Now
-                  </button>
-
-                  <button className="rounded-xl border border-white/30 bg-white/10 px-8 py-4 font-bold text-white backdrop-blur-md">
-                    More Info
-                  </button>
-                </div>
               </div>
             </div>
           </SwiperSlide>
