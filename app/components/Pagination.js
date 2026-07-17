@@ -7,40 +7,33 @@ function getPages(currentPage, lastPage) {
   const pages = [];
   const delta = 2;
 
-  // همیشه صفحه اول
   pages.push(1);
 
   let start = Math.max(2, currentPage - delta);
   let end = Math.min(lastPage - 1, currentPage + delta);
 
-  // اگر نزدیک اول بود
   if (currentPage <= 4) {
     start = 2;
     end = Math.min(5, lastPage - 1);
   }
 
-  // اگر نزدیک آخر بود
   if (currentPage >= lastPage - 3) {
     start = Math.max(2, lastPage - 4);
     end = lastPage - 1;
   }
 
-  // ...
   if (start > 2) {
     pages.push("...");
   }
 
-  // صفحات وسط
   for (let i = start; i <= end; i++) {
     pages.push(i);
   }
 
-  // ...
   if (end < lastPage - 1) {
     pages.push("...");
   }
 
-  // همیشه صفحه آخر
   if (lastPage > 1) {
     pages.push(lastPage);
   }
