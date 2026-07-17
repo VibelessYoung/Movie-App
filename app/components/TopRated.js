@@ -1,6 +1,7 @@
 import { getMovies } from "../lib/api";
 import TopRatedGrid from "./TopRatedGrid";
 import { Star } from "lucide-react";
+import Link from "next/link";
 
 export default async function TopRated() {
   const response = await getMovies();
@@ -26,9 +27,12 @@ export default async function TopRated() {
           </p>
         </div>
 
-        <button className="rounded-xl border border-red-600 px-5 py-3 text-red-500 transition hover:bg-red-600 hover:text-white">
+        <Link
+          className="rounded-xl border border-red-600 px-5 py-3 text-red-500 transition hover:bg-red-600 hover:text-white"
+          href="/top-rated"
+        >
           View All
-        </button>
+        </Link>
       </div>
 
       <TopRatedGrid movies={movies} />

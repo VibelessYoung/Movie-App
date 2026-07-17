@@ -1,6 +1,7 @@
 import { getMovies } from "../lib/api";
 import SerialSlider from "./MoviesSlider";
 import { Flame } from "lucide-react";
+import Link from "next/link";
 
 export default async function Serials() {
   const response = await getMovies();
@@ -22,9 +23,12 @@ export default async function Serials() {
           </p>
         </div>
 
-        <button className="rounded-xl border border-red-500 px-5 py-2 text-red-500 transition hover:bg-red-600 hover:text-white">
+        <Link
+          className="rounded-xl border border-red-600 px-5 py-3 text-red-500 transition hover:bg-red-600 hover:text-white"
+          href="/trending"
+        >
           View All
-        </button>
+        </Link>
       </div>
 
       <SerialSlider movies={response.data} />
