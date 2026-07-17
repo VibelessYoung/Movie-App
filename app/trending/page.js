@@ -1,8 +1,13 @@
 import { getMovies } from "../lib/api";
 import MovieGrid from "../components/MovieGrid";
+import Pagination from "../components/Pagination";
 
-export default async function TrendingPage() {
-  const response = await getMovies();
+export default async function TrendingPage({ searchParams }) {
+  const params = await searchParams;
+
+  const page = Number(params.page) || 1;
+
+  const response = await getMovies(page);
 
   const movies = response.data.sort((a, b) => b.popularity - a.popularity);
 
@@ -17,6 +22,12 @@ export default async function TrendingPage() {
       </div>
 
       <MovieGrid movies={movies} />
+
+      <Pagination
+        currentPage={page}
+        lastPage={response.last_page}
+        basePath="/trending"
+      />
     </main>
   );
 }
