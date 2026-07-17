@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-screen flex flex-col bg-zinc-950">
         <FavoritesProvider>
           <Header />
-          <main className="flex-1">{children}</main>
+          <section className="flex-1">{children}</section>
           <Footer />
         </FavoritesProvider>
       </body>
