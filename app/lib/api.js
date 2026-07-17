@@ -20,3 +20,21 @@ export const getMovies = (page = 1) => fetchApi(`/paginated?page=${page}`);
 export const getRandomMovie = () => fetchApi("/random");
 
 export const getRandomMovies = (count = 5) => fetchApi(`/random/${count}`);
+
+export async function getMovieById(id) {
+  const firstPage = await getMovies(1);
+
+  const lastPage = firstPage.last_page;
+
+  for (let page = 1; page <= lastPage; page++) {
+    const response = page === 1 ? firstPage : await getMovies(page);
+
+    const movie = response.data.find((item) => item.movie_id === Number(id));
+
+    if (movie) {
+      return movie;
+    }
+  }
+
+  return null;
+}

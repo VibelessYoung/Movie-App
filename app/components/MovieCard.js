@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function MovieCard({ movie }) {
   return (
-    <Link href={`/movies/${movie.movie_id}`}>
+    <Link href={`/movie/${movie.movie_id}`}>
       <div className="group overflow-hidden rounded-3xl bg-zinc-900 transition duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-600/20">
         <img
           src={movie.poster_path}
