@@ -1,9 +1,14 @@
 import { getMovies } from "../lib/api";
 import MovieGrid from "../components/MovieGrid";
 import { Star } from "lucide-react";
+import Pagination from "../components/Pagination";
 
-export default async function TopRatedPage() {
-  const response = await getMovies();
+export default async function TopRatedPage({ searchParams }) {
+  const params = await searchParams;
+
+  const page = Number(params.page) || 1;
+
+  const response = await getMovies(page);
 
   const movies = response.data.sort((a, b) => b.vote_average - a.vote_average);
 
@@ -25,6 +30,11 @@ export default async function TopRatedPage() {
       </div>
 
       <MovieGrid movies={movies} />
+      <Pagination
+        currentPage={page}
+        lastPage={response.last_page}
+        basePath="/trending"
+      />
     </main>
   );
 }
