@@ -1,10 +1,12 @@
 "use client";
+import Link from "next/link";
 
 export default function TopRatedGrid({ movies }) {
   return (
     <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
       {movies.map((movie) => (
-        <div
+        <Link
+          href={`/movie/${movie.movie_id}`}
           key={movie.id}
           className="group overflow-hidden rounded-3xl bg-zinc-900 transition duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-red-600/20"
         >
@@ -33,7 +35,7 @@ export default function TopRatedGrid({ movies }) {
               {movie.overview}
             </p>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
