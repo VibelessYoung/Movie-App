@@ -1,13 +1,15 @@
+import FAQ from "./components/FAQ";
 import HeroSection from "./components/HeroSection";
-import Serials from "./components/Movies";
+import Movies from "./components/Movies";
 import TopRated from "./components/TopRated";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <Serials />
+      <Movies />
       <TopRated />
+      <FAQ />
     </>
   );
 }
