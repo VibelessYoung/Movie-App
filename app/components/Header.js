@@ -73,9 +73,12 @@ function Header() {
             <Search size={20} />
           </Link>
 
-          <button className="rounded-xl bg-zinc-900 p-2.5 text-zinc-300 transition hover:bg-zinc-800 hover:text-red-500 sm:p-3">
+          <Link
+            className="rounded-xl bg-zinc-900 p-2.5 text-zinc-300 transition hover:bg-zinc-800 hover:text-red-500 sm:p-3"
+            href="/favorites"
+          >
             <Heart size={20} />
-          </button>
+          </Link>
 
           <button className="hidden rounded-xl bg-zinc-900 p-3 text-zinc-300 transition hover:bg-zinc-800 hover:text-white sm:block">
             <Bell size={20} />
