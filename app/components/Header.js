@@ -10,54 +10,41 @@ function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6">
         {/* Logo */}
-        <div className="flex cursor-pointer items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-red-600 shadow-lg shadow-red-600/30 sm:h-11 sm:w-11">
-            <Clapperboard className="h-5 w-5 text-white sm:h-6 sm:w-6" />
+        <Link href="/">
+          <div className="flex cursor-pointer items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-red-600 shadow-lg shadow-red-600/30 sm:h-11 sm:w-11">
+              <Clapperboard className="h-5 w-5 text-white sm:h-6 sm:w-6" />
+            </div>
+
+            <div>
+              <h1 className="text-xl font-extrabold tracking-wide text-white sm:text-2xl">
+                Movie<span className="text-red-500">Hub</span>
+              </h1>
+
+              <p className="hidden text-xs text-zinc-400 sm:block">
+                Discover your next favorite movie
+              </p>
+            </div>
           </div>
-
-          <div>
-            <h1 className="text-xl font-extrabold tracking-wide text-white sm:text-2xl">
-              Movie<span className="text-red-500">Hub</span>
-            </h1>
-
-            <p className="hidden text-xs text-zinc-400 sm:block">
-              Discover your next favorite movie
-            </p>
-          </div>
-        </div>
-
+        </Link>
         {/* Desktop Nav */}
         <nav className="hidden items-center gap-10 lg:flex">
-          <a
-            href="#"
+          <Link
+            href="/"
             className="text-sm font-medium text-white transition hover:text-red-500"
           >
             Home
-          </a>
+          </Link>
 
-          <a
-            href="#"
-            className="text-sm font-medium text-zinc-400 transition hover:text-red-500"
-          >
-            Movies
-          </a>
-
-          <a
-            href="#"
-            className="text-sm font-medium text-zinc-400 transition hover:text-red-500"
-          >
-            TV Shows
-          </a>
-
-          <a
-            href="#"
+          <Link
+            href="/trending"
             className="text-sm font-medium text-zinc-400 transition hover:text-red-500"
           >
             Trending
-          </a>
+          </Link>
 
           <a
-            href="#"
+            href="/top-rated"
             className="text-sm font-medium text-zinc-400 transition hover:text-red-500"
           >
             Top Rated
@@ -79,10 +66,6 @@ function Header() {
           >
             <Heart size={20} />
           </Link>
-
-          <button className="hidden rounded-xl bg-zinc-900 p-3 text-zinc-300 transition hover:bg-zinc-800 hover:text-white sm:block">
-            <Bell size={20} />
-          </button>
 
           <button className="hidden rounded-xl bg-red-600 px-5 py-2.5 font-semibold text-white transition hover:bg-red-700 md:block">
             Login
