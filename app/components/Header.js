@@ -1,10 +1,12 @@
 "use client";
-import { useState } from "react";
-import { Search, Bell, Heart, Menu, Clapperboard, X } from "lucide-react";
+import { useState, useContext } from "react";
+import { Search, Moon, Heart, Menu, Clapperboard, X } from "lucide-react";
 import Link from "next/link";
+import { ThemeContext } from "../context/ThemeContext";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme, setTheme } = useContext(ThemeContext);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-xl">
@@ -66,6 +68,13 @@ function Header() {
           >
             <Heart size={20} />
           </Link>
+
+          <button
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="rounded-xl bg-zinc-900 p-2.5 text-zinc-300 transition hover:bg-zinc-800 hover:text-red-500 sm:p-3"
+          >
+            <Moon size={20} />
+          </button>
 
           <button className="hidden rounded-xl bg-red-600 px-5 py-2.5 font-semibold text-white transition hover:bg-red-700 md:block">
             Login

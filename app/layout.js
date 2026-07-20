@@ -9,11 +9,11 @@ export default function RootLayout({ children }) {
     <html lang="en" className="">
       <body className="min-h-screen flex flex-col bg-zinc-950">
         <FavoritesProvider>
-          <Header />
-          <section className="flex-1">
-            <ThemeProvider>{children}</ThemeProvider>
-          </section>
-          <Footer />
+          <ThemeProvider>
+            <Header />
+            <section className="flex-1">{children}</section>
+            <Footer />
+          </ThemeProvider>
         </FavoritesProvider>
       </body>
     </html>
