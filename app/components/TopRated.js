@@ -14,7 +14,7 @@ export default async function TopRated() {
     <section className="mx-auto mt-24 max-w-7xl px-6">
       <div className="mb-10 flex items-center justify-between">
         <div>
-          <h2 className="flex items-center gap-3 text-4xl font-black tracking-tight text-white">
+          <h2 className="flex items-center gap-3 text-4xl font-black tracking-tight text-white light:text-black">
             <div className="rounded-xl bg-yellow-400/15 p-2">
               <Star className="h-7 w-7 fill-yellow-400 text-yellow-400" />
             </div>
@@ -22,7 +22,7 @@ export default async function TopRated() {
             <span>Top Rated Movies</span>
           </h2>
 
-          <p className="mt-3 text-zinc-400">
+          <p className="mt-3 text-zinc-400 light:text-black/50">
             Discover the highest-rated movies.
           </p>
         </div>

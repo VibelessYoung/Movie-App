@@ -9,7 +9,7 @@ export default function TopRatedGrid({ movies }) {
         <Link
           href={`/movie/${movie.movie_id}`}
           key={movie.id}
-          className="group overflow-hidden rounded-3xl bg-zinc-900 transition duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-red-600/20"
+          className="group overflow-hidden rounded-3xl bg-zinc-900 light:bg-gray-100 transition duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-red-600/20"
         >
           <div className="relative overflow-hidden">
             <img
@@ -28,7 +28,7 @@ export default function TopRatedGrid({ movies }) {
           </div>
 
           <div className="p-5">
-            <h3 className="line-clamp-1 text-xl font-bold text-white">
+            <h3 className="line-clamp-1 text-xl font-bold text-white light:text-black">
               {movie.original_title}
             </h3>
 
