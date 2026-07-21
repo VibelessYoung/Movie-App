@@ -9,7 +9,7 @@ function Header() {
   const { theme, setTheme } = useContext(ThemeContext);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 w-full border-b border-zinc-800 bg-zinc-950/80 light:bg-white/10 backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6">
         {/* Logo */}
         <Link href="/">

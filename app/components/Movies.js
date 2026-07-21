@@ -10,7 +10,7 @@ export default async function Serials() {
     <section className="mx-auto mt-20 max-w-7xl px-6">
       <div className="mb-8 flex items-center justify-between">
         <div>
-          <h2 className="flex items-center gap-3 text-4xl font-black tracking-tight text-white">
+          <h2 className="flex items-center gap-3 text-4xl font-black tracking-tight text-white light:text-black">
             <div className="rounded-xl bg-red-400/15 p-2">
               <Flame className="h-7 w-7 fill-orange-400 text-orange-400" />
             </div>
@@ -18,7 +18,7 @@ export default async function Serials() {
             <span>Trending Movies</span>
           </h2>
 
-          <p className="mt-2 text-zinc-400">
+          <p className="mt-2 text-zinc-400 light:text-black/50">
             Discover the most popular movies today.
           </p>
         </div>

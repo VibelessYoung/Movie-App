@@ -7,7 +7,7 @@ import { ThemeProvider } from "./context/ThemeContext";
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="">
-      <body className="min-h-screen flex flex-col bg-zinc-950">
+      <body className="min-h-screen flex flex-col bg-zinc-950 light:bg-white">
         <FavoritesProvider>
           <ThemeProvider>
             <Header />
