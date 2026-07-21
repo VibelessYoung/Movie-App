@@ -19,11 +19,11 @@ function Header() {
             </div>
 
             <div>
-              <h1 className="text-xl font-extrabold tracking-wide text-white sm:text-2xl">
+              <h1 className="text-xl font-extrabold tracking-wide text-white sm:text-2xl light:text-black">
                 Movie<span className="text-red-500">Hub</span>
               </h1>
 
-              <p className="hidden text-xs text-zinc-400 sm:block">
+              <p className="hidden text-xs text-zinc-400 light:text-black/50 sm:block">
                 Discover your next favorite movie
               </p>
             </div>
@@ -33,21 +33,21 @@ function Header() {
         <nav className="hidden items-center gap-10 lg:flex">
           <Link
             href="/"
-            className="text-sm font-medium text-white transition hover:text-red-500"
+            className="text-sm font-medium text-white light:text-black transition hover:text-red-500"
           >
             Home
           </Link>
 
           <Link
             href="/trending"
-            className="text-sm font-medium text-zinc-400 transition hover:text-red-500"
+            className="text-sm font-medium text-zinc-400 light:text-black transition hover:text-red-500"
           >
             Trending
           </Link>
 
           <a
             href="/top-rated"
-            className="text-sm font-medium text-zinc-400 transition hover:text-red-500"
+            className="text-sm font-medium text-zinc-400 light:text-black transition hover:text-red-500"
           >
             Top Rated
           </a>
