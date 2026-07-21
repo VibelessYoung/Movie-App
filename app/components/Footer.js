@@ -12,7 +12,7 @@ function Footer() {
   };
 
   return (
-    <footer className="mt-28 border-t border-zinc-800 bg-zinc-950">
+    <footer className="mt-28 border-t border-zinc-800 light:bg-gray-200 bg-zinc-950">
       <div className="mx-auto max-w-7xl px-6 py-16">
         {/* Top */}
         <div className="grid gap-12 lg:grid-cols-4">
@@ -24,16 +24,16 @@ function Footer() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-white">
+                <h2 className="text-2xl font-bold text-white light:text-black">
                   Movie
                   <span className="text-red-500">Hub</span>
                 </h2>
 
-                <p className="text-sm text-zinc-400">Watch. Discover. Enjoy.</p>
+                <p className="text-sm text-zinc-400 light:text-black/50">Watch. Discover. Enjoy.</p>
               </div>
             </div>
 
-            <p className="mt-6 leading-7 text-zinc-400">
+            <p className="mt-6 leading-7 text-zinc-400 light:text-black/50">
               MovieHub is a modern movie discovery platform where you can
               explore trending movies, TV shows, actors, and build your own
               watchlist.
@@ -42,7 +42,7 @@ function Footer() {
 
           {/* Navigation */}
           <div>
-            <h3 className="mb-5 text-lg font-semibold text-white">
+            <h3 className="mb-5 text-lg font-semibold text-white light:text-black">
               Navigation
             </h3>
 
@@ -52,7 +52,7 @@ function Footer() {
                   <li key={item}>
                     <a
                       href="#"
-                      className="text-zinc-400 transition hover:text-red-500"
+                      className="text-zinc-400 light:text-black/50 transition hover:text-red-500"
                     >
                       {item}
                     </a>
@@ -64,7 +64,7 @@ function Footer() {
 
           {/* Categories */}
           <div>
-            <h3 className="mb-5 text-lg font-semibold text-white">
+            <h3 className="mb-5 text-lg font-semibold text-white light:text-black">
               Categories
             </h3>
 
@@ -74,7 +74,7 @@ function Footer() {
                   <li key={item}>
                     <a
                       href="#"
-                      className="text-zinc-400 transition hover:text-red-500"
+                      className="text-zinc-400 light:text-black/50 transition hover:text-red-500"
                     >
                       {item}
                     </a>
@@ -86,10 +86,10 @@ function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="mb-5 text-lg font-semibold text-white">Contact</h3>
+            <h3 className="mb-5 text-lg font-semibold text-white light:text-black">Contact</h3>
 
             <div className="space-y-4">
-              <div className="flex items-center gap-3 text-zinc-400">
+              <div className="flex items-center gap-3 text-zinc-400 light:text-black/50">
                 <Mail size={18} />
                 support@moviehub.com
               </div>
