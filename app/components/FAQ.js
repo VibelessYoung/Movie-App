@@ -43,11 +43,11 @@ export default function FAQ() {
           <HelpCircle className="text-red-500" size={34} />
         </div>
 
-        <h2 className="text-4xl font-black text-white">
+        <h2 className="text-4xl font-black text-white light:text-black">
           Frequently Asked Questions
         </h2>
 
-        <p className="mt-4 text-zinc-400">
+        <p className="mt-4 text-zinc-400 light:text-black/50">
           Everything you need to know about MovieHub.
         </p>
       </div>
@@ -58,13 +58,13 @@ export default function FAQ() {
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/60 backdrop-blur-xl"
+            className="overflow-hidden rounded-2xl border border-zinc-800 light:bg-gray-100 bg-zinc-900/60 backdrop-blur-xl"
           >
             <button
               onClick={() => setActive(active === index ? null : index)}
               className="flex w-full items-center justify-between px-7 py-6 text-left"
             >
-              <span className="text-lg font-semibold text-white">
+              <span className="text-lg font-semibold text-white light:text-black">
                 {faq.question}
               </span>
 
@@ -81,7 +81,7 @@ export default function FAQ() {
               }`}
             >
               <div className="overflow-hidden">
-                <p className="px-7 pb-6 leading-8 text-zinc-400">
+                <p className="px-7 pb-6 leading-8 text-zinc-400 light:text-black/50">
                   {faq.answer}
                 </p>
               </div>
