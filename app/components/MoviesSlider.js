@@ -38,7 +38,7 @@ export default function SerialSlider({ movies }) {
       {movies.map((movie) => (
         <SwiperSlide className="py-3" key={movie.id}>
           <Link key={movie.id} href={`/movie/${movie.movie_id}`}>
-            <div className="group overflow-hidden rounded-2xl bg-zinc-900 transition duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-600/20">
+            <div className="group overflow-hidden rounded-2xl bg-zinc-900 light:bg-white transition duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-600/20">
               <div className="relative overflow-hidden">
                 <img
                   src={movie.poster_path}
@@ -56,7 +56,7 @@ export default function SerialSlider({ movies }) {
               </div>
 
               <div className="p-5">
-                <h3 className="line-clamp-1 text-lg font-bold text-white">
+                <h3 className="line-clamp-1 text-lg font-bold text-white light:text-black">
                   {movie.original_title}
                 </h3>
 
