@@ -1,6 +1,6 @@
 "use client";
 import { useState, useContext } from "react";
-import { Search, Moon, Heart, Menu, Clapperboard, X } from "lucide-react";
+import { Search, Moon, Heart, Menu, Clapperboard, X, Sun } from "lucide-react";
 import Link from "next/link";
 import { ThemeContext } from "../context/ThemeContext";
 
@@ -73,7 +73,7 @@ function Header() {
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="rounded-xl bg-zinc-900 p-2.5 text-zinc-300 transition hover:bg-zinc-800 hover:text-red-500 sm:p-3"
           >
-            <Moon size={20} />
+            {theme === "dark" ? <Moon size={20} /> : <Sun size={20} />}
           </button>
 
           <button className="hidden rounded-xl bg-red-600 px-5 py-2.5 font-semibold text-white transition hover:bg-red-700 md:block">
