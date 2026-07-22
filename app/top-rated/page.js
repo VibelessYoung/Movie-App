@@ -21,9 +21,9 @@ export default async function TopRatedPage({ searchParams }) {
         </div>
 
         <div>
-          <h1 className="text-5xl font-black text-white">Top Rated Movies</h1>
+          <h1 className="text-5xl font-black text-white light:text-black">Top Rated Movies</h1>
 
-          <p className="mt-2 text-zinc-400">
+          <p className="mt-2 text-zinc-400 light:text-black/50">
             Discover the highest-rated movies of all time.
           </p>
         </div>
